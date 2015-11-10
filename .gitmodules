@@ -1,0 +1,6 @@
+[submodule "word_cloud"]
+	path = word_cloud
+	url = git@github.com:amueller/word_cloud.git
+[submodule "scholar.py"]
+	path = scholar.py
+	url = https://github.com/ckreibich/scholar.py.git
