@@ -21,5 +21,70 @@
 cd $PBS_O_WORKDIR
 
 source ../../bin/activate
-bash ./generate_word_cloud_for_bob_murphy.sh
+
+if [ -z `which pdftotext` ]; then
+  echo "pdftotext is not installed. Install first and then try again."
+  exit
+fi
+
+WORDS='words_'`date +"%m-%d-%Y"`'.txt'
+
+echo "Downloading articles"
+for FILE in $(cat links.out)
+do
+        wget -nc "$FILE"
+done
+
+echo "Extracting text"
+for FILE in *.pdf
+do
+        pdftotext "$FILE"
+        rm -fv "$FILE"
+done
+
+echo "Concatenating text files"
+for FILE in *.txt
+do
+        if [ ! -f links.txt ]; then
+                cat "$FILE" >> words.txt
+                rm -fv "$FILE"
+        fi
+done
+
+if [ -f temp.html ]; then
+	rm -fv temp.html
+fi
+
+echo "Generating word clouds"
+python generate_word_cloud_for_bob_murphy.py
+
+if [ -f words.txt ]; then
+	wc -w words.txt
+fi
+mv words.txt $WORDS
+
+#images
+DIRECTORY='images'
+if [ ! -d $DIRECTORY ]; then
+	mkdir $DIRECTORY
+fi
+
+COUNT=`ls -1 *.png 2>/dev/null | wc -l`
+if [ $COUNT != 0 ]
+then
+	mv -v *.png $DIRECTORY
+fi
+
+#words
+DIRECTORY='words'
+if [ ! -d $DIRECTORY ]; then
+	mkdir $DIRECTORY
+fi
+
+COUNT=`ls -1 *.txt 2>/dev/null | wc -l`
+if [ $COUNT != 0 ]
+then
+	mv *.txt $DIRECTORY
+fi
+
 deactivate
