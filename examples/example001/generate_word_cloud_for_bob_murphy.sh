@@ -35,6 +35,7 @@ python generate_word_cloud_for_bob_murphy.py
 if [ -f words.txt ]; then
 	wc -w words.txt
 fi
+mv words.txt $WORDS
 
 #images
 DIRECTORY='images'
