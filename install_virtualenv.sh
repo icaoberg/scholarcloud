@@ -6,9 +6,6 @@ pip install cython
 pip install -U ipython
 pip install tabulate
 pip install textract
-cd word_cloud
-python setup.py install
-cd ..
-
+pip install wordcloud
 
 deactivate
