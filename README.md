@@ -35,7 +35,7 @@ within Python. At this point I am not happy with the results.
 
 ![Wordcloud generated using example004](examples/example004/images/words001000.png)
 
-### example004: ```python```
+### example005: ```python```
 This example extracts a book from the Gutenberg project and then constructs a wordcloud using a stencil in Python. Somewhat happy. We could use a synthetic cell to generate a word cloud for the lab? Or some raw data?
 
 ![Wordcloud generated using example005](examples/example005/little_women.png)
