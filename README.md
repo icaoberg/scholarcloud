@@ -1,8 +1,8 @@
 # scholarcloud
-Simple script that generates a wordcloud from different scholar resources.
+Simple script that generates a wordcloud from different scholarly resources.
 
-This code is super-alpha. I am still testing other python so that I do not have
-reinvent the wheel. If everything works as planed, scholarcloud will be nothing but
+This code is super-alpha. I am still testing other python packages that can I
+piece together so that I do not have reinvent the wheel. If everything works as planed, scholarcloud will be nothing but
 wrapper around existing tools.
 
 ## List of Examples
