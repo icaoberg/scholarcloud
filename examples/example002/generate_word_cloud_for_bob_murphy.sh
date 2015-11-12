@@ -13,30 +13,34 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
- if [ -z `which pdftotext` ]; then
-   echo "pdftotext is not installed. Install first and then try again."
-   exit
- fi
+
+source ../../bin/activate
+
+if [ -z `which pdftotext` ]; then
+  echo "pdftotext is not installed. Install first and then try again."
+  exit
+fi
 
 WORDS='words_'`date +"%m-%d-%Y"`'.txt'
 
-echo "Downloading articles"
 for FILE in $(cat links.out)
 do
-        wget -nc "$FILE"
+        echo "Downloading article "$FILE
+        wget -quiet -nc "$FILE"
 done
 
-echo "Extracting text"
 for FILE in *.pdf
 do
+        echo "Extracting text from "$FILE
         pdftotext "$FILE"
-        rm -fv "$FILE"
+        rm -f "$FILE"
 done
 
 echo "Concatenating text files"
 for FILE in *.txt
 do
         if [ ! -f links.txt ]; then
+                echo "Concatenating "$FILE
                 cat "$FILE" >> words.txt
                 rm -fv "$FILE"
         fi
@@ -46,6 +50,7 @@ if [ -f temp.html ]; then
 	rm -fv temp.html
 fi
 
+echo "Generating word clouds"
 python generate_word_cloud_for_bob_murphy.py
 
 if [ -f words.txt ]; then

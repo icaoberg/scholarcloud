@@ -29,23 +29,24 @@ fi
 
 WORDS='words_'`date +"%m-%d-%Y"`'.txt'
 
-echo "Downloading articles"
 for FILE in $(cat links.out)
 do
-        wget -nc "$FILE"
+        echo "Downloading article "$FILE
+        wget -quiet -nc "$FILE"
 done
 
-echo "Extracting text"
 for FILE in *.pdf
 do
+        echo "Extracting text from "$FILE
         pdftotext "$FILE"
-        rm -fv "$FILE"
+        rm -f "$FILE"
 done
 
 echo "Concatenating text files"
 for FILE in *.txt
 do
         if [ ! -f links.txt ]; then
+                echo "Concatenating "$FILE
                 cat "$FILE" >> words.txt
                 rm -fv "$FILE"
         fi
