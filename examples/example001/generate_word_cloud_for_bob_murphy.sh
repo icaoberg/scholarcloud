@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-WORDS='words_'`11-11-2015`'.txt'
+WORDS='words_'`date +"%m-%d-%Y"`'.txt'
 if [ ! -f words.txt ]; then
 	for I in {1..500}
 	do
