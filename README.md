@@ -13,7 +13,10 @@ Murphy. Since there is no official Google Scholar API, this is rather hacky. But
 ![Wordcloud generated using example001](examples/example001/images/words001000.png)
 
 ### example002
-This downloads PDFS files hosted in the Murphy Lab website and extracts the text
-to be used to generate the wordclouds. This is rather hacky as well. But it does the job.
+This example downloads PDF files hosted in the Murphy Lab website (```found in links.out```)
+and extracts the text to generate the wordclouds. This is rather hacky as well. But it does the job.
 
 ![Wordcloud generated using example002](examples/example002/images/words001000.png)
+
+### example003
+This example attempts to scrape the Google Scholar page associated with Carnegie Mellon University to extract the list of scientists registered in the site along with the Google Scholar ID.
