@@ -26,7 +26,10 @@ mask = imread(path.join(d, filename))
 # little women by louisa may alcott
 filename = 'little_women.txt'
 gutenberg_url = 'http://www.gutenberg.org/cache/epub/514/pg514.txt'
-urllib.urlretrieve(gutenberg_url, filename)
+
+if not path.isfile( filename ):
+	urllib.urlretrieve(gutenberg_url, filename)
+
 text = open(filename).read()
 
 # adding movie script specific stopwords
