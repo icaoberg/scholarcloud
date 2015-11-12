@@ -20,4 +20,6 @@
 
 cd $PBS_O_WORKDIR
 
+source ../../bin/activate
 bash ./generate_word_cloud_for_bob_murphy.sh
+deactivate
