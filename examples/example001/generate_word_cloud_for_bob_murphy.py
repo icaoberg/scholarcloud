@@ -24,7 +24,6 @@ from wordcloud import WordCloud, STOPWORDS
 #change this to your taste
 dpi = 3000
 
-#i used wc to count the number of words in little_women.txt
 list_of_number_of_words = [25,50,100,250,500,1000]
 
 def grey_color_func(word, font_size, position, orientation, random_state=None, **kwargs):
