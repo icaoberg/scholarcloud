@@ -5,7 +5,7 @@
 Simple script that generates a wordcloud from different scholarly resources.
 
 This code is super-alpha. I am still testing other python packages that can I
-piece together so that I do not have reinvent the wheel. If everything works as planed, scholarcloud will be nothing but
+piece together so that I do not have reinvent the wheel. If everything works as planned, scholarcloud will be nothing but
 wrapper around existing tools.
 
 ## List of Examples using Existing Tools
