@@ -17,7 +17,7 @@ if [ ! -f words.txt ]; then
 	for I in {1..500}
 	do
 		URL='https://scholar.google.com/citations?user=qQLlBH4AAAAJ&hl=en&oi=ao&cstart='
-		wget -nc --output-document "$I.html" $URL$I
+		wget --no-check-certificate -nc --output-document "$I.html" $URL$I
 		cat $I.html | tr ">" "\n" >> temp.html
 		rm -fv $I.html
 	done
