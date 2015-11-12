@@ -5,23 +5,23 @@ This code is super-alpha. I am still testing other python packages that can I
 piece together so that I do not have reinvent the wheel. If everything works as planed, scholarcloud will be nothing but
 wrapper around existing tools.
 
-## List of Examples
-### example001
+## List of Examples using Existing Tools
+### example001: ```bash```+```python```
 This example scrapes all the pages in Google Scholar that are related to Robert F.
 Murphy. Since there is no official Google Scholar API, this is rather hacky. But it does the job.
 
 ![Wordcloud generated using example001](examples/example001/images/words001000.png)
 
-### example002
+### example002: ```bash```+```python```
 This example downloads PDF files hosted in the Murphy Lab website (```found in links.out```)
 and extracts the text to generate the wordclouds. This is rather hacky as well. But it does the job.
 
 ![Wordcloud generated using example002](examples/example002/images/words001000.png)
 
-### example003
+### example003:```bash```
 This example attempts to scrape the Google Scholar page associated with Carnegie Mellon University to extract the list of scientists registered in the site along with the Google Scholar ID.
 
-### example004
+### example004: ```python```
 This example attempts to extract the text from
 
 ```
