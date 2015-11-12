@@ -1,4 +1,7 @@
 # scholarcloud
+
+[![Build Status](https://travis-ci.org/icaoberg/scholarcloud.svg)](https://travis-ci.org/icaoberg/scholarcloud)
+
 Simple script that generates a wordcloud from different scholarly resources.
 
 This code is super-alpha. I am still testing other python packages that can I
