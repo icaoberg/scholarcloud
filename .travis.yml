@@ -9,6 +9,7 @@ virtualenv:
 branches:
   only:
     - master
+    - dev
 
 before_install:
     - echo "before_install"
@@ -32,9 +33,11 @@ before_install:
     - pip install textract
     - pip install wordcloud
 
-
 script:
     - cd examples
     - cd example001
+    - bash ./runme.sh
+    - cd ..
+    - cd example002
     - bash ./runme.sh
     - cd ..
