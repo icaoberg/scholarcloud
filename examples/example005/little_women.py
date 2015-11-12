@@ -36,8 +36,6 @@ wordcloud = WordCloud(max_words=number_of_words, mask=mask, stopwords=stopwords,
                random_state=1).generate(text)
 
 # store default colored image
-plt.figure()
-plt.axis("off")
-plt.imshow( wordcloud )
+image = wordcloud.to_image()
 filename='little_women.png'
-plt.savefig(filename, dpi=dpi)
+image.save( filename, "PNG" ) 
