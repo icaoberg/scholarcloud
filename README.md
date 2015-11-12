@@ -20,3 +20,8 @@ and extracts the text to generate the wordclouds. This is rather hacky as well. 
 
 ### example003
 This example attempts to scrape the Google Scholar page associated with Carnegie Mellon University to extract the list of scientists registered in the site along with the Google Scholar ID.
+
+### example004
+This example attempts to extract the text from a PDF file within Python. At this point I am not happy with the results.
+
+![Wordcloud generated using example004](examples/example004/images/words001000.png)
