@@ -26,7 +26,7 @@ WORDS='words_'`date +"%m-%d-%Y"`'.txt'
 for FILE in $(cat links.out)
 do
         echo "Downloading article "$FILE
-        wget -quiet -nc "$FILE"
+        wget --quiet -nc "$FILE"
 done
 
 for FILE in *.pdf
