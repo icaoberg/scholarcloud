@@ -11,8 +11,12 @@ branches:
     - master
     - dev
 
+git:
+    submodules: false
+
 before_install:
     - echo "before_install"
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - git submodule update --init --recursive
     - echo $VIRTUAL_ENV
     - df -h
