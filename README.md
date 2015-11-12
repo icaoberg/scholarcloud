@@ -22,6 +22,15 @@ and extracts the text to generate the wordclouds. This is rather hacky as well. 
 This example attempts to scrape the Google Scholar page associated with Carnegie Mellon University to extract the list of scientists registered in the site along with the Google Scholar ID.
 
 ### example004
-This example attempts to extract the text from a PDF file within Python. At this point I am not happy with the results.
+This example attempts to extract the text from
+
+```
+An Analysis of Active Learning With Uniform Feature Noise
+Aaditya Ramdas, Barnabas Poczos, Aarti Singh, Larry Wasserman
+Comments: 24 pages, 2 figures, published in the proceedings of the 17th International Conference on Artificial Intelligence and Statistics (AISTATS), 2014
+Subjects: Machine Learning (stat.ML); Artificial Intelligence (cs.AI); Learning (cs.LG); Statistics Theory (math.ST)
+```
+
+within Python. At this point I am not happy with the results.
 
 ![Wordcloud generated using example004](examples/example004/images/words001000.png)
