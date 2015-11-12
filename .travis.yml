@@ -9,9 +9,15 @@ virtualenv:
 branches:
   only:
     - master
+    - dev
+
+git:
+    submodules: false
 
 before_install:
     - echo "before_install"
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+    - git submodule update --init --recursive
     - echo $VIRTUAL_ENV
     - df -h
     - date
@@ -32,9 +38,11 @@ before_install:
     - pip install textract
     - pip install wordcloud
 
-
 script:
     - cd examples
     - cd example001
+    - bash ./runme.sh
+    - cd ..
+    - cd example002
     - bash ./runme.sh
     - cd ..
