@@ -46,3 +46,12 @@ script:
     - cd example002
     - bash ./runme.sh
     - cd ..
+    - cd example004
+    - python ./runme.py
+    - cd ..
+    - cd example005
+    - python ./runme.py
+    - cd ..
+    - cd biology
+    - bash ./runme.sh
+    - cd ..

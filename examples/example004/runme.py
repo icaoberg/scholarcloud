@@ -46,9 +46,9 @@ colors = ['white', 'black']
 for number_of_words in list_of_number_of_words:
     for color in colors:
         print "Making a " + color + " wordcloud with " + str(number_of_words) + " words."
-    	wordcloud = WordCloud(max_words=number_of_words, stopwords=stopwords, margin=0,
+    	wordcloud = WordCloud(background_color=color, max_words=number_of_words, stopwords=stopwords, margin=0,
     	      	        random_state=1, width=width, height=height).generate(text)
 
-    	filename='murphy_' + color + "_" + str(number_of_words).zfill(6) + '.png'
+    	filename='images/wasserman_' + color + "_" + str(number_of_words).zfill(6) + '.png'
     	image = wordcloud.to_image()
     	image.save( filename, "PNG" )
