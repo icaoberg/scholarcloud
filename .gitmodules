@@ -4,3 +4,6 @@
 [submodule "scholar.py"]
 	path = scholar.py
 	url = https://github.com/ckreibich/scholar.py.git
+[submodule "gscholar"]
+	path = gscholar
+	url = git@github.com:venthur/gscholar.git
